@@ -1,10 +1,10 @@
 # Arizona Electricity Market Analysis & Forecasting
 
-Python + Tableau analysis of Arizona retail electricity pricing and Henry Hub natural gas costs (2019–2024), sourced live from the EIA API, with seasonal trend analysis and a regression-based forecasting model.
+Python and Tableau analysis of Arizona retail electricity pricing and Henry Hub natural gas costs (2019–2024), sourced live from the EIA API, with seasonal trend analysis and a regression-based forecasting model.
 
 ## Why I built this
 
-I built this model to better understand how Arizona electricity prices change over time — the seasonal patterns behind the fluctuations, whether natural gas prices play a role, and how well historical patterns can predict prices in a year the model hasn't seen. As someone who pays utility bills in Arizona myself, I wanted a clearer, data-backed picture of what drives these price shifts instead of just feeling them on my bill.
+I built this model to better understand how Arizona electricity prices change over time: the seasonal patterns behind the fluctuations, whether natural gas prices play a role, and how well historical patterns can predict prices in a year the model hasn't seen. As someone who pays utility bills in Arizona myself, I wanted a clearer, data-backed picture of what drives these price shifts instead of just feeling them on my bill.
 
 ## What it does
 
@@ -19,7 +19,7 @@ I built this model to better understand how Arizona electricity prices change ov
 
 - There is no linear correlation between electricity and gas prices (r ≈ -0.02).
 - On average, summer electricity prices are 12.7% higher than winter, with price spikes concentrated in July and August each year. Prices show a generally upward trend since 2020, following a dip that year (likely tied to COVID-19).
-- Despite showing no linear correlation with electricity price on its own, removing gas price from the model significantly reduced its predictive accuracy — R² dropped from 0.44 to 0.20 — suggesting gas price's effect is conditional on seasonal and yearly patterns rather than a simple direct relationship.
+- Despite showing no linear correlation with electricity price on its own, removing gas price from the model significantly reduced its predictive accuracy: R² dropped from 0.44 to 0.20, suggesting gas price's effect is conditional on seasonal and yearly patterns rather than a simple direct relationship.
 - Encoding month as a raw number caused the first model to perform worse than a naive average (R² = -0.28), since it forced December (12) and January (1) to opposite ends of the scale despite both being winter. Encoding season as a categorical variable instead raised R² to 0.44.
 
 ## Tech stack
